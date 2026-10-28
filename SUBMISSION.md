@@ -61,10 +61,10 @@ Details:
 ## d. Project link
 
 ```
-(add the live Render URL here after deploying, e.g. https://the-tall-tale-tent.onrender.com/)
+https://the-tall-tale-tent.onrender.com/
 ```
 
-Source: _(add the GitHub repo URL after pushing)_
+Source: https://github.com/bisolakushimo19-bit/The-Tall-Tale-Tent
 
 ---
 
@@ -79,7 +79,7 @@ Source: _(add the GitHub repo URL after pushing)_
 
 ## Before you submit
 
-- [ ] Push this folder to a new GitHub repo, deploy it on Render (Build `npm install`, Start `npm start`, Health Check Path `/healthz`), and paste the URL above.
+- [x] Pushed to GitHub and deployed on Render (Oct 28). `/healthz` returns ok; a full practice game plays on the live link.
 - [ ] Add an UptimeRobot monitor on `https://…onrender.com/healthz` so the free instance doesn't sleep.
 - [ ] Play one full practice game on the live link, on a phone and on a laptop.
 - [ ] Play one game with 4+ real people.
