@@ -1,10 +1,12 @@
 # The Tall Tale Tent
 
-![The Tall Tale Tent: the reveal, with the WHOPPER stamp on the lie and the players it fooled](cover_image.jpg)
+<p align="center"><img src="ttt_cover_letter.jpg" alt="The Tall Tale Tent poster: three ticket stubs A, B and C under a striped circus tent, a WHOPPER! stamp, a Go Double token, and the sideshow performers" width="460"></p>
 
 **Play now:** _(add the Render link after deploying)_. Enter a name and tap **Practice with bots** for a full game against three sideshow performers.
 
 Two truths and a lie, set in a county-fair sideshow, for 4–15 players. The Node server owns each room, every timer, the shuffled A/B/C order and the lie. No client learns where the lie sits until the reveal. Players join with a four-letter tent code. No account is needed.
+
+![In play: the reveal, with the WHOPPER stamp on the lie and the players it fooled](cover_image.jpg)
 
 ## Run locally
 

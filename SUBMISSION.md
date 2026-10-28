@@ -14,9 +14,11 @@ The Tall Tale Tent: Two Truths and a Whopper
 
 ## b. Project cover image
 
-![The Tall Tale Tent cover](cover_image.jpg)
+![The Tall Tale Tent cover](ttt_cover_letter.jpg)
 
-Upload `cover_image.jpg` from this folder (also saved as `covers/tall-tale-tent-cover.jpg`). It shows the reveal screen, with the WHOPPER! stamp on the lie, who bet on each ticket, and who was fooled, plus the title band.
+Upload `ttt_cover_letter.jpg` from this folder (also saved as `covers/tall-tale-tent-poster.jpg`). It's a portrait poster (784×1168): three ticket stubs A, B and C under the striped tent, the WHOPPER! stamp, a Go Double token and the sideshow performers.
+
+If the form crops to a landscape frame, use `cover_image.jpg` instead (1600×900, a real screenshot of the reveal, also saved as `covers/tall-tale-tent-cover.jpg`).
 
 ## c. Project description
 
