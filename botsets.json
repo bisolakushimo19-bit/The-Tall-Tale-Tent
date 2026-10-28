@@ -1,0 +1,8 @@
+[
+  { "tales": ["I once rode a camel for a whole afternoon", "I have never learned to whistle", "I won a county fair prize for my pickled onions"], "lie": 2 },
+  { "tales": ["I can name every planet's largest moon", "I was born during a thunderstorm", "I once shook hands with an astronaut"], "lie": 0 },
+  { "tales": ["I have a pet tortoise older than my parents", "I sang in a choir for six years", "I have broken the same arm twice"], "lie": 0 },
+  { "tales": ["I learned to ride a unicycle at age nine", "I have visited eleven countries", "I once ate a whole pizza by myself"], "lie": 0 },
+  { "tales": ["I have never been on an aeroplane", "I can solve a puzzle cube in under a minute", "My first job was walking a neighbour's dogs"], "lie": 1 },
+  { "tales": ["I once found an old coin in my garden", "I am scared of butterflies", "I appeared in a TV advert as a baby"], "lie": 2 }
+]

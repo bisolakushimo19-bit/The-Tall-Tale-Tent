@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#C23B2E">
+<meta name="description" content="Two truths and a whopper at a county-fair sideshow. Spot the lie, bet a Go Double chip, and bluff your friends in the spotlight. 4 to 15 players.">
+<title>The Tall Tale Tent</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 2 26h28z' fill='%23C23B2E' stroke='%231B2A49' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M16 2 11 26h10z' fill='%23F3E9D2'/%3E%3Cpath d='M13 26q3-8 6 0' fill='%231B2A49'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="awning">
+  <div class="awning-bar">
+    <a class="brand" href="/" aria-label="The Tall Tale Tent home"><span class="brand-flag" aria-hidden="true"></span><span class="brand-name">THE TALL TALE TENT</span></a>
+    <div class="awning-tools">
+      <span class="rank-chip" data-fx-chip title="Your midway rank"></span>
+      <button id="sound-toggle" class="icon-button" aria-pressed="true" aria-label="Sound on" title="Sound"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M4 9h4l5-4v14l-5-4H4z"/><path class="wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="mute" d="M16 9l6 6M22 9l-6 6"/></svg></button>
+      <button id="help-open" class="icon-button" aria-label="How to play" title="How to play">?</button>
+    </div>
+  </div>
+  <div class="scallops" aria-hidden="true"></div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>NOW SHOWING ★ TWO TRUTHS AND A WHOPPER ★ STEP RIGHT UP ★ SPOT THE LIE +100 ★ GO DOUBLE ×2 ★ FOOL YOUR FRIENDS +50 ★ LAST CALL AT THE TOTE BOARD ★ 4–15 PLAYERS OR SOLO WITH BOTS ★&nbsp;</span><span>NOW SHOWING ★ TWO TRUTHS AND A WHOPPER ★ STEP RIGHT UP ★ SPOT THE LIE +100 ★ GO DOUBLE ×2 ★ FOOL YOUR FRIENDS +50 ★ LAST CALL AT THE TOTE BOARD ★ 4–15 PLAYERS OR SOLO WITH BOTS ★&nbsp;</span></div></div>
+<main id="app">
+  <section id="landing" class="landing">
+    <div class="marquee">
+      <p class="marquee-kicker">★ COUNTY FAIR SIDESHOW · 4–15 PLAYERS ★</p>
+      <div class="sign"><h1><span class="h-small">THE</span> TALL TALE <span class="h-red">TENT</span></h1></div>
+      <p class="tagline">Two truths. One whopper.</p>
+      <p class="intro">Step right up! Everyone hands the Barker three tales about themselves, and <b>one of them is a lie</b>. Spot the whoppers, bet on your hunch, and keep a straight face, or swing the spotlight to bluff, when it's your turn.</p>
+      <div class="parade" aria-label="Tonight's performers: Madame Zola, Barnaby Pike, Tilly Tumble, and you">
+        <span class="parade-label">TONIGHT IN THE TENT</span>
+        <ul class="parade-row" aria-hidden="true">
+          <li style="--d:0s"><span class="av md" style="--av:#8A4F7D">🔮</span><small>Madame Zola</small></li>
+          <li style="--d:.25s"><span class="av md" style="--av:#1B2A49">🎩</span><small>Barnaby Pike</small></li>
+          <li style="--d:.5s"><span class="av md" style="--av:#D9A21B">🎪</span><small>Tilly Tumble</small></li>
+          <li style="--d:.75s" class="you"><span class="av md" style="--av:#C23B2E">?</span><small>You</small></li>
+        </ul>
+      </div>
+    </div>
+    <form class="ticket-form" id="landing-form" autocomplete="off" novalidate>
+      <div class="ticket-head"><span>ADMIT ONE</span><span>Nº <b id="ticket-no">0001</b></span></div>
+      <label for="player-name">Your name</label>
+      <input id="player-name" maxlength="14" placeholder="e.g. Oliver" autocomplete="nickname" spellcheck="false">
+      <label for="room-code">Tent code</label>
+      <div class="join-row"><input id="room-code" aria-describedby="code-hint" maxlength="4" placeholder="KFRT" autocapitalize="characters" spellcheck="false"><button id="join-button" class="button blue" type="submit">STEP RIGHT IN <span aria-hidden="true">→</span></button></div>
+      <p class="code-hint" id="code-hint">Four letters from whoever raised the tent, like <b data-example-code>KFRT</b>. Hosting? Skip this.</p>
+      <div class="or-rule"><span>or raise your own</span></div>
+      <fieldset class="mode-toggle">
+        <legend>Tent rules</legend>
+        <label><input type="radio" name="mode" value="party" checked><span><b>Party</b><small>Standard filter and timers</small></span></label>
+        <label><input type="radio" name="mode" value="classroom"><span><b>Classroom</b><small>First names, stricter filter, 25% more time</small></span></label>
+      </fieldset>
+      <button id="host-button" class="button red full" type="button">RAISE A TENT (HOST) <span aria-hidden="true">⛺</span></button>
+      <button id="practice-button" class="button ghost full" type="button"><span class="quick">▶ QUICK PLAY</span>PRACTICE WITH BOTS <small>you + 3 sideshow bots · about 4 minutes</small></button>
+      <p class="solo-hint">Playing alone? Tap <b>Practice with bots</b> for a full game against three sideshow performers.</p>
+      <p id="landing-error" class="form-error" role="alert"></p>
+    </form>
+    <div class="landing-foot">
+      <section class="prize-board" aria-labelledby="prize-title">
+        <h2 id="prize-title" class="prize-title"><span>★</span> PRIZE BOARD <span>★</span></h2>
+        <ol class="prizes">
+          <li><b class="pz">+100</b><span><strong>Spot the whopper</strong>Pick the lie in each player's three tales.</span></li>
+          <li><b class="pz gold">×2</b><span><strong>Go Double</strong>One brass chip per game: +200 if right, −50 if wrong.</span></li>
+          <li><b class="pz red">+50</b><span><strong>Fool the crowd</strong>Every wrong guess on your tales pays you.</span></li>
+          <li><b class="pz navy">☼</b><span><strong>Work the spotlight</strong>Swing it onto a ticket to hint, or to bluff.</span></li>
+          <li><b class="pz">+50</b><span><strong>Long shot</strong>Back the whopper before Last Call while the crowd bets elsewhere.</span></li>
+        </ol>
+      </section>
+      <div id="rank-card" class="fx-card rank-card" aria-label="Your midway rank"></div>
+    </div>
+  </section>
+  <section id="game" class="game hidden"></section>
+</main>
+
+<dialog id="howto" aria-labelledby="howto-title">
+  <button class="dialog-close" id="help-close" aria-label="Close">×</button>
+  <div class="kicker">THE BARKER EXPLAINS</div>
+  <h2 id="howto-title">How to play</h2>
+  <div class="how-cards" id="how-cards">
+    <article class="how-card" data-card="0">
+      <div class="how-art" aria-hidden="true"><span class="mini-stub">I can juggle</span><span class="mini-stub">I met a mayor</span><span class="mini-stub lie">I've been to 31 countries</span></div>
+      <h3><b>1</b> Write two truths and one lie</h3>
+      <p>You get 90 seconds to write three short tales about yourself. Mark the one that's a lie. Stuck? Tap a prompt chip for a starter.</p>
+    </article>
+    <article class="how-card" data-card="1" hidden>
+      <div class="how-art" aria-hidden="true"><span class="mini-stub">A</span><span class="mini-stub picked">B ✓</span><span class="mini-stub">C</span></div>
+      <h3><b>2</b> Spot the whopper</h3>
+      <p>Each player steps into the spotlight. Their tales appear as tickets A, B and C in a shuffled order. Tap the one you think is the lie and lock it in. Right: +100. Fool people with your own tales: +50 for each one.</p>
+      <p class="how-twist"><b>☼ Work the spotlight.</b> Once per game, on your own turn, swing the spotlight onto one ticket. It might be a hint, or a bluff.</p>
+    </article>
+    <article class="how-card" data-card="2" hidden>
+      <div class="how-art how-tote" aria-hidden="true"><span class="mini-token">×2</span><span class="mini-tote"><i style="--h:.2"></i><i style="--h:.7"></i><i style="--h:.1"></i></span></div>
+      <h3><b>3</b> Bet a Go Double chip when you're sure</h3>
+      <p>You get one brass Go Double chip per game (two in games of 10 or more). Right with a chip: +200. Wrong with a chip: −50.</p>
+      <p class="how-twist"><b>🎯 Last Call.</b> Before the reveal, the tote board shows how the crowd bet, and you can switch. If you were already on the whopper while it held under half the bets, you score a long-shot bonus of +50.</p>
+    </article>
+  </div>
+  <div class="how-nav">
+    <button class="button ghost small" id="how-back" type="button">← Back</button>
+    <div class="how-dots" id="how-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <button class="button red small" id="how-next" type="button">Next →</button>
+  </div>
+  <p class="privacy-note">Tales live only in the tent's memory and are deleted when the tent closes. No accounts, nothing stored.</p>
+</dialog>
+
+<div id="hud" class="hud hidden" role="status" aria-label="Your stats"></div>
+<div id="react-layer" class="react-layer" aria-hidden="true"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="announcer" class="sr-only" aria-live="polite"></div>
+<script src="/fx.js"></script>
+<script src="/client.js"></script>
+</body>
+</html>

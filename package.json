@@ -1,0 +1,13 @@
+{
+  "name": "the-tall-tale-tent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two truths and a whopper: a county-fair sideshow party game",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

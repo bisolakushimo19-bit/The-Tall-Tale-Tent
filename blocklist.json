@@ -1,0 +1,28 @@
+{
+  "about": "Words the Barker refuses to read out. 'party' applies in every room; 'classroom' is added on top in Classroom mode. Add plain lowercase words to either list; simple endings (s, es, ed, ing, er, ers, in, y) are caught too. 'rot13' holds the base profanity and slur list, ROT13-encoded so the file stays readable; leave it as it is.",
+  "rot13": "shpx shpxre shpxvat shpxrq zbgureshpxre fuvg fuvggl ohyyfuvg phag onfgneq qvpx qvpxurnq juber fyhg gjng jnax jnaxre cvff nffubyr nefrubyr obyybpxf avttre avttn snttbg snt ergneq xvxr puvax fcvp genaal jrgonpx tbbx",
+  "party": [],
+  "classroom": [
+    "crap",
+    "damn",
+    "hell",
+    "sucks",
+    "stupid",
+    "idiot",
+    "sexy",
+    "sex",
+    "naked",
+    "nude",
+    "drunk",
+    "beer",
+    "vodka",
+    "weed",
+    "stoned",
+    "boobs",
+    "butt",
+    "murder",
+    "gun",
+    "loser",
+    "dumb"
+  ]
+}
